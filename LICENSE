@@ -1,0 +1,15 @@
+Copyright (c) 2024 Mikhail Bolotov
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to use the Software solely in conjunction with Integrated Development Environments (IDEs) based on IntelliJ IDEA (including but not limited to IntelliJ IDEA, PyCharm, WebStorm, PhpStorm, RubyMine, AppCode, CLion, and Android Studio), subject to the following conditions:
+
+1. Use Restrictions: The Software may only be used as a plugin, tool, or component in an IntelliJ-based IDE. Usage of the Software outside of IntelliJ-based IDEs is strictly prohibited.
+
+2. Redistribution: Redistributions of the Software in binary or source form must retain this license notice in all copies or substantial portions of the Software.
+
+3. Modifications: Any modifications to the Software must not alter or remove this license notice and must clearly state that the modifications are based on the original Software.
+
+4. Commercial Use: Commercial use of the Software is permitted only if the Software is used within an IntelliJ-based IDE. Any commercial use of the Software outside this scope requires explicit permission from the original author.
+
+5. Disclaimer: THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+By using the Software, you agree to the terms and conditions outlined in this license.

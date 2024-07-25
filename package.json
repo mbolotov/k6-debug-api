@@ -1,0 +1,29 @@
+{
+  "name": "k6-debug-api",
+  "version": "1.0.1",
+  "description": "JavaScript implementation of Grafana k6 core modules (unofficial). It can be used for debugging k6 scripts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "keywords": [
+    "k6.io",
+    "debugger"
+  ],
+  "author": "Mikhail Bolotov <mikhail.bolotov@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mbolotov/k6-debug-api.git"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "cheerio": "^1.0.0-rc.12",
+    "sync-request": "^6.1.0",
+    "then-request": "^6.0.2",
+    "tough-cookie": "^4.1.4",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+  }
+}
