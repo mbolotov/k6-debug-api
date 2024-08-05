@@ -48,10 +48,7 @@ function connect(url, paramsOrCallback, callback) {
     try {
         const ws = new WebSocket(url, options);
         const socket = new Socket(ws);
-
-        ws.on('open', () => {
-            if (callback) callback(socket);
-        });
+        if (callback) callback(socket);
 
         ws.on('error', (error) => {
             console.error('WebSocket error:', error);
