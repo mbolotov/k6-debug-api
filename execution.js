@@ -24,7 +24,7 @@ const execution = {
             console.log(`Test aborted: ${input || ''}`);
             process.exit(108); // Aborts the test run with the exit code 108
         },
-        options: {}, // Placeholder for Options
+        options: global.__k6_options,
     },
 
     vu: {
@@ -39,5 +39,7 @@ const execution = {
         },
     },
 };
+
+global.__k6_intellij_exectition = execution
 
 export default execution;

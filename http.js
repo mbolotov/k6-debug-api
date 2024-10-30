@@ -3,6 +3,7 @@ import {Cookie, CookieJar as ToughCookieJar} from 'tough-cookie';
 import {load} from 'cheerio';
 import querystring from 'querystring';
 import thenRequest from 'then-request';
+import execution from "./execution.js";
 
 
 export const OCSP_STATUS_GOOD = 'good';
@@ -231,7 +232,10 @@ function request(method, url, body, params) {
             options.headers['Cookie'] = formatCookies(params.cookies);
         }
         if (options.headers['User-Agent'] === undefined) {
-            options.headers['User-Agent'] = 'k6';
+            let fromOptions = execution.test.options?.userAgent
+            if (fromOptions) {
+                options.headers['User-Agent'] = fromOptions;
+            }
         }
 
         const urlWithParams = url + queryString;
