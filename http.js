@@ -211,6 +211,7 @@ function request(method, url, body, params) {
         const options = {
             headers: params?.headers || {},
             timeout: params?.timeout,
+            rejectUnauthorized: execution.test.options?.insecureSkipTLSVerify ?? false
         };
 
         if (auth) {
@@ -257,6 +258,9 @@ function request(method, url, body, params) {
         timings.duration = timings.sending + timings.waiting + timings.receiving;
         return new Response(response.statusCode, responseBody, response.headers, url, params?.jar, null, null, timings, requestDetails);
     } catch (error) {
+        if (execution.test.options?.throw === true) {
+            throw new Error("Failed to make a http request: " + error)
+        }
         const errorEnd = Date.now();
 
         timings.blocked = 0;

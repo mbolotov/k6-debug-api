@@ -1,6 +1,6 @@
 {
   "name": "k6-debug-api",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "JavaScript implementation of Grafana k6 core modules (unofficial). It can be used for debugging k6 scripts",
   "main": "index.js",
   "scripts": {

@@ -1,5 +1,5 @@
 export const starterScript = process.env["debug-starter-script"]
-export const strict = process.env["strict"] === "true";
+export const strict = () => global.__k6_options?.throw === true;
 
 const execution = {
     scenario: {
@@ -40,6 +40,6 @@ const execution = {
     },
 };
 
-global.__k6_intellij_exectition = execution
+global.__k6_intellij_execution = execution
 
 export default execution;

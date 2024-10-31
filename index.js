@@ -34,7 +34,7 @@ function doCheck(name, v, val) {
         console.error(`Check '${name}' is not a function: ${JSON.stringify(v)}`)
         return false
     }
-    if (strict) {
+    if (strict()) {
         v(val)
     } else {
         try {
@@ -77,7 +77,7 @@ export function fail(err) {
  * });
  */
 export function group(name, fn) {
-    if (strict) {
+    if (strict()) {
         fn()
     } else {
         try {
