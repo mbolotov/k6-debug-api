@@ -219,7 +219,7 @@ function request(method, url, body, params) {
         }
 
         if (body !== null && body !== undefined) {
-            if (typeof body === 'string') {
+            if (typeof body === 'string' || Buffer.isBuffer(body) || body instanceof ArrayBuffer) {
                 options.body = body;
             } else if (typeof body === 'object' && method === 'POST') {
                 options.body = querystring.stringify(body);
