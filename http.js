@@ -1,9 +1,9 @@
 import syncRequest from 'sync-request';
 import {Cookie, CookieJar as ToughCookieJar} from 'tough-cookie';
-import {load} from 'cheerio';
 import querystring from 'querystring';
 import thenRequest from 'then-request';
 import execution from "./execution.js";
+import {parseHTML} from "./html.js";
 
 
 export const OCSP_STATUS_GOOD = 'good';
@@ -368,11 +368,11 @@ class Response {
     }
 
     html(selector) {
-        const $ = load(this.body);
+        const $ = parseHTML(this.body);
         if (selector) {
-            return $(selector);
+            return $.find(selector);
         } else {
-            return $.root();
+            return $.elements;
         }
     }
 
