@@ -20,7 +20,7 @@ npm install k6-debug-api --save-dev
 
 ## Integration with k6 IntelliJ Plugin
 
-This module is a crucial component for the k6 IntelliJ plugin when running k6 scripts in debug mode. Ensure you have
+This module is a crucial component for the [k6 IntelliJ plugin](https://plugins.jetbrains.com/plugin/16141-k6/) when running k6 scripts in debug mode. Ensure you have
 this module installed to take full advantage of the plugin's debugging capabilities.
 
 ## Contributing
