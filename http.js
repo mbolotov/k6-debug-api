@@ -256,7 +256,7 @@ function request(method, url, body, params) {
         timings.waiting = responseEnd - responseStart;
         timings.receiving = Date.now() - responseEnd;
         timings.duration = timings.sending + timings.waiting + timings.receiving;
-        return new Response(response.statusCode, responseBody, response.headers, url, params?.jar, null, null, timings, requestDetails);
+        return new Response(response.statusCode, responseBody, response.headers, url, params?.jar, '', 0, timings, requestDetails);
     } catch (error) {
         if (execution.test.options?.throw === true) {
             throw new Error("Failed to make a http request: " + error)
@@ -315,7 +315,7 @@ function addAuthHeaders(headers, authMethod, username, password) {
 }
 
 class Response {
-    constructor(status, body, headers, url, jar, error = null, errorCode = null, timings, request) {
+    constructor(status, body, headers, url, jar, error = '', errorCode = 0, timings, request) {
         this.body = body;
         this.cookies = parseCookies(headers['set-cookie']);
         this.error = error;
