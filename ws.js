@@ -10,7 +10,14 @@ class Socket {
     }
 
     on(event, handler) {
-        this.ws.on(event, handler);
+        this.ws.on(event, (e) => {
+            if (event === 'error') {
+                e.error = function () {
+                    return e.message
+                }
+            }
+            handler(e)
+        });
     }
 
     ping() {
