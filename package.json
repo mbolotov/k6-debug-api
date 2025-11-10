@@ -1,6 +1,6 @@
 {
   "name": "k6-debug-api",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "description": "Unofficial JavaScript implementation of Grafana k6 core modules, enabling local debugging of k6 scripts using the k6 plugin for IntelliJ platform.",
   "main": "index.js",
   "scripts": {
